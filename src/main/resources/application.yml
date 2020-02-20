@@ -1,0 +1,20 @@
+#  DB 정보 & hibernate
+spring:
+  datasource:
+    url: jdbc:h2:tcp://192.168.0.166:9091/~/dev_h2/db/searchspace_batch;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    username: search_space
+    password: tjcltmvpdltm!!
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+
+---
+#Quartz
+spring:
+  quartz:
+    job-store-type: jdbc
+    scheduler-name: TestScheduler
+
